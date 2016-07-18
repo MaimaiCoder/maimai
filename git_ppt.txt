@@ -48,3 +48,10 @@ git push origin --tags 可以推送全部未推送过的本地标签
 git tag -d tagname 可以删除一个本地标签
 
 git push origin :refs/tags/tagname可以删除一个远程标签 
+
+1. 导出并压缩为 zip 格式:
+git archive --format=zip --output=v1.0.zip 1.0
+2. 导出并压缩为 tar.bz2 格式:
+git archive 1.0 | bzip2 > v1.0.tar.bz2
+3. 导出并压缩为 tar.gz 格式:
+git archive --format=tar 1.0 | gzip > v1.0.tar.gz
