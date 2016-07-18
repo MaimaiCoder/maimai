@@ -1,0 +1,50 @@
+创建与提交
+git init
+git add
+git commit -a
+git status
+git diff 
+git log --pretty=oneline
+git reset --hard HEAD^
+git reset  --hard HEAD~100 
+git reset --hard 版本号
+git reflog 
+
+远程拉取与克隆
+git remote add origin https://github.com/tugenhua0707/testgit.git
+git push origin master
+git clone https://github.com
+要查看远程库的信息 使用 git remote
+要查看远程库的详细信息 使用 git remote –v
+
+分支
+git branch dev 创建分支dev
+git checkout dev 切换到分支dev
+上面两条就等于底下这一条的意思
+git checkout -b dev
+git branch 查看分支
+切换到master后合并dev分支
+git merge dev 默认快进式合并模式
+git merge –no–ff develop 关闭快进式合并
+git branch -d dev 删除分支dev
+git stash 同一个人开发到一半没提交的情况下需要新增bug修复分支可以用此命令将工作现场隐藏起来 再创建分支
+git stash list 查看隐藏起来的工作现场
+git stash apply 恢复工作现场
+git stash drop 删除stash内容
+git stash pop 恢复现场并删除stash内容
+
+
+冲突解决
+在主分支上修改成需要的代码后提交
+
+标签
+git tag -a tagname -m "msg"
+git tag
+git show
+git push origin tagname 可以推送一个本地标签
+
+git push origin --tags 可以推送全部未推送过的本地标签
+
+git tag -d tagname 可以删除一个本地标签
+
+git push origin :refs/tags/tagname可以删除一个远程标签 
